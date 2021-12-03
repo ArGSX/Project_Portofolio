@@ -1,9 +1,17 @@
+/* Mulai code Anda dari baris terakhir */
+
 * {
     box-sizing: border-box;
   }
   
-  body {
+  html, body,
+  ul, ol, li,
+  h1, h2, h3, h4, h5, h6, p, div {
     margin: 0;
+    padding: 0;
+  }
+  
+  body {
     font-family: "Lucida Grande";
   }
   
@@ -17,7 +25,6 @@
   
   .container {
     max-width: 1170px;
-    width: 100%;
     padding: 0 15px;
     margin: 0 auto;
   }
@@ -77,56 +84,44 @@
     opacity: 1;
   }
   
-  .fa {
+  .fab {
     margin-right: 5px;
   }
   
   header {
-    height: 65px;
+    height: 77px;
     width: 100%;
     background-color: rgba(34, 49, 52, 0.9);
     position :fixed;
     top: 0;
     z-index: 10;
-  }
-  
-  .logo {
-    width: 124px;
-    margin-top: 20px;
-  }
-  
-  .header-left {
-    float: left;
-  }
-  
-  .header-right {
-    float: right;
-    margin-right: -25px;
-  }
-  
-  .header-right a {
-    line-height: 65px;
-    padding: 0 25px;
+  } 
+
+  .header-left a {
+    padding: 0px;
     color: white;
-    display: block;
-    float: left;
-    transition: all 0.5s;
   }
-  
-  .header-right a:hover {
+
+.header-left {
+  z-index: 2;
+}
+
+  .header-left a:hover {
     background-color: rgba(255, 255, 255, 0.3);
   }
-  
-  /* Tambahkan CSS untuk menu-icon */
-  .menu-icon {
+
+h5 {
+    padding: 0px 350px;
+    margin: 0px 35px;
+    font-size: 65px;
     color: white;
-    float: right;
-    font-size: 25px;
-    padding: 21px 0;
-    /* Gantikan property display ke none */
-    display: none;
+    display: block;
+    float: none;
+    text-align: center;
+    position :fixed;
+    top: 0;
+    z-index: 1;
   }
-  
   
   .lesson-wrapper {
     padding-bottom: 80px;
@@ -162,7 +157,7 @@
     color: white;
   }
   
-  .text-contents {
+  .txt-contents {
     width: 80%;
     display: inline-block;
     margin-top: 15px;
@@ -206,3 +201,39 @@
     padding-top: 30px;
     padding-bottom: 20px;
   }
+  
+  /* Ketik code Anda dibawah */
+  .menu-icon {
+    background-color: violet;
+    color:white;
+    font-size: 22px;
+    padding: 27.5px;
+    border: none;
+    cursor: pointer;
+  }
+
+.menu-icon:hover {
+    background-color: rgb(169, 169, 211);
+    }
+
+.header-left {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-child {
+    display: none;
+    background-color: violet;
+    min-width: 200px;
+    flex-direction: column;
+}
+.dropdown-child a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+}
+
+.header-left:hover .dropdown-child {
+    display: block;
+}
